@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <title>Afterglow, Get Your Glow On</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="{% static 'mainapp/img/mdb-favicon.ico' %}" type="image/x-icon"/>
+    <!-- Font Awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}"/>
+    <style>
+        body {
+            background-image: url("{% static 'img/gradient.png' %}");
+        }
+
+        .btn {
+            padding: .45rem 1.5rem .35rem;
+        }
+
+        .gradient-custom {
+            /* fallback for old browsers */
+            background: #f1b84a;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, #7f4c95, #f1b84a);
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, #7f4c95, #f1b84a)
+        }
+    </style>
+</head>
+<body>
+<!-- Start your project here-->
+<div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark gradient-custom">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="{% url 'home' %}">Afterglow</a>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-bars text-light"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">
+                            <div>
+                                <i class="fas fa-home fa-lg mb-1"></i>
+                            </div>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" href="{% url 'about' %}#!">
+                            <div>
+                                <i class="far fa-face-smile fa-lg mb-1"></i>
+                            </div>
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" aria-disabled="true" href="{% url 'classes' %}">
+                            <div>
+                                <i class="fas fa-user-graduate fa-lg mb-1"></i>
+                            </div>
+                            Classes
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" aria-disabled="true" href="{% url 'shop' %}">
+                            <div>
+                                <i class="fas fa-cart-shopping fa-lg mb-1"></i>
+                            </div>
+                            Shop
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" aria-disabled="true" href="{% url 'community' %}">
+                            <div>
+                                <i class="far fa-user-group fa-lg mb-1"></i>
+                            </div>
+                            Community
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" aria-disabled="true" href="{% url 'blog' %}">
+                            <div>
+                                <i class="fas fa-blog fa-lg mb-1"></i>
+                            </div>
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item text-center mx-2 mx-lg-1">
+                        <a class="nav-link" aria-disabled="true" href="{% url 'contact' %}">
+                            <div>
+                                <i class="far fa-envelope fa-lg mb-1"></i>
+                            </div>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+
+    {% block content %} {% endblock %}
+
+
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container my-5">
+
+        <footer class="bg-light text-center text-white fixed-bottom">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #3b5998;"
+                            href="#!"
+                            role="button"
+                    >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a
+                            class="btn btn-primary btn-floating m-1"
+                            style="background-color: #ac2bac;"
+                            href="#!"
+                            role="button"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </div>
+</div>
+<!-- End of .container -->
+<!-- MDB -->
+<script type="text/javascript" src="{% static 'js/mdb.umd.min.js' %}"></script>
+</body>
+</html>
+        
